@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt('Số nguyên a: '));
+    let b = parseInt(prompt('Số nguyên b: '));
+    let c = parseInt(prompt('Số nguyên c: '));
+    let delta = b * b - 4 * a * c;
+    if (delta < 0) {
+        alert('phương trình bậc 2 vô nghiệm.')
+    }
+    if (delta == 0) {
+        let x = -b / 2;
+        alert('phương trình bậc 2 có nghiệm kép' + x)
+    }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let minute = parseInt(prompt("Số phút bạn gọi: "));
+    if (minute < 50) {
+        let price1 = minute * 600;
+        alert('Bạn phải trả ' + price1)
+    } else if (minute < 150) {
+        let price2 = 30000 + minute * 400;
+        alert('Bạn phải trả ' + price2)
+    } else if (minute > 200) {
+        let price3 = 90000 + minute * 200;
+        alert('Bạn phải trả: ' + price3)
+    }
+</script>
+</body>
+</html>

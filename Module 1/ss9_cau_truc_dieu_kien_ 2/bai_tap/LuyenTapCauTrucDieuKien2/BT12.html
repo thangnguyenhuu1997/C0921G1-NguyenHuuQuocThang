@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let loan = parseInt(prompt("Tiến vay: "));
+    let month = parseInt(prompt("Thời hạn bn tháng: "));
+    let interest_rate = parseInt(prompt("Lãi suất theo tháng bn %: "));
+    let tiengoc_hangthang = loan / month;
+    switch (month) {
+        case 1:
+            let tienlai_thang1 = (loan * interest_rate) / 12;
+            alert('Tháng này bạn phải trả: ' + tienlai_thang1)
+            break;
+        case 2:
+            let tienlai_thang2 = (loan - tienlai_thang1) * interest_rate / 12;
+            alert('Tháng này bạn phải trả: ' + tienlai_thang2)
+            break;
+        case 3:
+            let tienlai_thang3 = (loan - tienlai_thang2) * interest_rate / 12;
+            alert('Tháng này bạn phải trả: ' + tienlai_thang3)
+    }
+    }
+</script>
+</body>
+</html>

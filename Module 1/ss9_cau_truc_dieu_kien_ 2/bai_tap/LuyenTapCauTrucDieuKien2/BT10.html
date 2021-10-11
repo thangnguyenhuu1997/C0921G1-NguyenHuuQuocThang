@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let kWh = parseInt(prompt('Số kWh gia đình bạn tiêu thu: '));
+    if (kWh <= 50) {
+        let price1 = kWh * 1678;
+        alert('Bạn phải thanh toán: ' + price1)
+    } else if (kWh <= 100) {
+        let price2 = 83900 + kWh * 1734;
+        alert('Bạn phải thanh toán: ' + price2)
+    } else if (kWh <= 200) {
+        let price3 = 170600 + kWh * 2014;
+        alert('Bạn phải thanh toán: ' + price3)
+    }
+    }
+
+</script>
+</body>
+</html>

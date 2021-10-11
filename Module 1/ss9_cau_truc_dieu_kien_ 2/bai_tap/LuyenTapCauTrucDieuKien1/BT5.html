@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let diemkiemtra = parseFloat(prompt("diemkiemtra: "));
+    let diemgiuaky = parseFloat(prompt("diemgiuaky: "));
+    let diemcuoiky = parseFloat(prompt("diemcuoiky: "));
+    let average = (diemkiemtra + diemgiuaky * 2 + diemcuoiky * 3) / 6;
+    if (average >= 8) {
+        alert('Học sinh giỏi')
+    } else if (average >= 6.5) {
+        alert('Học sinh khá')
+    } else if (average > 5) {
+        alert('Học sinh trung bình')
+    } else {
+        alert('Học sinh Yếu')
+    }
+</script>
+</body>
+</html>
