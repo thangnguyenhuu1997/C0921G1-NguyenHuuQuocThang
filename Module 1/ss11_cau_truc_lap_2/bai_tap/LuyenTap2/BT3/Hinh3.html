@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let row = 5;
+    let col = 5;
+    for (let i=1;i<=row;i++){
+        for (let j=col;j>=i;j--){
+            document.write("&nbsp&nbsp");
+        }
+        for (let j=0;j<i;j++){
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+</script>
+</body>
+</html>
