@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="English" placeholder="Eng"/>
+<button id="trans" onclick="trans()"/>Translate</button>
+<input type="text" id="display" placeholder="Viet"/>
+<script>
+    let eng = ["dog", "cat", "bird"];
+    let viet = ["chó", "mèo", "chim"];
+    function trans() {
+        let English = document.getElementById("English").value;
+        let check = false;
+        for (let i = 0; i < eng.length; i++) {
+            if (English === eng[i]) {
+                check = true;
+                document.getElementById("display").value = viet[i];
+            }
+        }
+        if (check === false) {
+            document.write('Không tìm thấy');
+        }
+    }
+</script>
+</body>
+</html>
