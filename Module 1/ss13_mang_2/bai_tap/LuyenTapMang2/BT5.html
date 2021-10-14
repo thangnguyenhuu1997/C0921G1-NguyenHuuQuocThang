@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = prompt('Nhập vào chuỗi a: ');
+    let b = prompt('Nhập vào chuỗi b: ');
+    let arr1 = a.split(" ");
+    let arr2 = b.split(" ");
+    let check = false;
+    for (let i = 0; i < arr1.length; i++) {
+        for (let j = 0; i < arr2.length; j++) {
+            if (arr1[i] == arr2[j]) {
+                alert('Hai chuỗi giống nhau');
+            }
+        }
+    }
+</script>
+</body>
+</html>
