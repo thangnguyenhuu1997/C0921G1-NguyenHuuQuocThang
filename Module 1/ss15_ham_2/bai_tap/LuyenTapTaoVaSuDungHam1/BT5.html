@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let b = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    function star(ngoiSao) {
+        let flag = false;
+        for (let i = 0; i < a.length; i++){
+            if (ngoiSao === a[i]){
+                flag = true;
+                alert(b[i]);
+            }
+        }
+        if (flag === false){
+            alert("Không tìm thấy");
+        }
+    }
+    let ngoisao1 = prompt("Nhập tên ngôi sao");
+    star(ngoisao1)
+</script>
+</body>
+</html>
