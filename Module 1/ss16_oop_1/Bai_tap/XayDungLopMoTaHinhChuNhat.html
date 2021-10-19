@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class ChuNhat {
+        constructor(dai, rong) {
+            this.dai = dai;
+            this.rong = rong;
+        }
+
+        getDai() {
+            return this.dai
+        }
+
+        getRong() {
+            return this.rong
+        }
+
+        setDai(Dai) {
+            this.dai = Dai
+        }
+
+        setRong(Rong) {
+            this.rong = Rong
+        }
+
+        tinhDientich() {
+            document.write('Diện tích là ' + this.dai * this.rong)
+        }
+
+        tinhChuvi() {
+            document.write('Chu vi là ' + (this.dai + this.rong) * 2)
+        }
+
+        Canvas() {
+            let canvas = document.getElementById('canvas1');
+            let ctx = canvas.getContext('2d');
+            ctx.beginPath();
+            ctx.rect(50, 20, 300, 200);
+            ctx.stroke();
+        }
+    }
+
+    let ChuNhat1 = new ChuNhat();
+    let ChuNhat2 = new ChuNhat();
+    ChuNhat1.getDai();
+    ChuNhat1.getRong();
+    ChuNhat1.setRong(30);
+    ChuNhat1.setDai(30);
+    ChuNhat1.tinhDientich();
+    document.write('<br>')
+    ChuNhat1.tinhChuvi()
+    document.write('<br>');
+    ChuNhat2.Canvas();
+    document.write('<br>');
+</script>
+</body>
+</html>

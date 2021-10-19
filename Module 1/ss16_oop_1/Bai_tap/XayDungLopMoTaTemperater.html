@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        constructor(ctemp) {
+            if(ctemp>-273) {
+                this.ctemp = ctemp;
+            } else {
+                alert("Nhiệt độ phải lớn hơn -273 độ")
+            }
+        }
+
+        getCtemp() {
+            return this.ctemp
+        }
+        changeFtemp(){
+            let ftemp;
+            return ftemp=1.8*this.ctemp+32;
+        }
+        changeKtemp(){
+            let ktemp;
+            return ktemp=this.ctemp+273.15;
+        }
+    }
+    let ctemp=new Temperature(-275);
+
+    let ftemp=ctemp.changeFtemp();
+    let ktemp=ctemp.changeKtemp();
+    document.write("Độ C là: " + ctemp.getCtemp()+" độ"+"<br>");
+    document.write("Đổi sang độ F là: " + ftemp+" độ"+"<br>");
+    document.write("Đổi sang độ K là: " + ktemp+" độ");
+</script>
+</body>
+</html>
