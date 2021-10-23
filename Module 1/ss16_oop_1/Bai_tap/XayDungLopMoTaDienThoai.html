@@ -6,63 +6,76 @@
 </head>
 <body>
 <script>
-    class MyDate1{
-        constructor(ngay, thang, nam) {
-            this.day = ngay;
+    class DienThoai {
 
-            this.month = thang;
+        constructor() {
+            this.pin = 100;
+            this.vungNhoSoanThao = "";
+            this.vungNhoTinDen = [];
+            this.vungNhoTinGui = [];
+            this.trangThai = true;
+        }
 
-            this.year = nam;
+        getTrangThai() {
+            if (this.trangThai) {
+                console.log("điện thoại đang bật");
+            } else {
+                console.log("điện thoại đang tắt")
+            }
         }
-        getDay(){
-            return this.day;
+
+        batTat() {
+            this.trangThai = !this.trangThai;
         }
-        getMonth(){
-            return this.month;
+
+        soanTin(text) {
+            this.vungNhoSoanThao = text;
         }
-        getYear(){
-            return this.year;
+
+        sacPin() {
+            this.pin = 100;
         }
-        setDay(day){
-            this.day=day;
+
+        nhanTinNhan(message) {
+            this.vungNhoTinDen.push(message);
         }
-        setMonth(month){
-            this.month=month;
+
+        guiTinNhan(dienThoai, message) {
+            this.soanTin(message);
+            this.vungNhoTinGui.push(this.vungNhoSoanThao);
+            dienThoai.nhanTinNhan(message);
+            this.vungNhoSoanThao = "";
         }
-        setYear(year){
-            this.year=year;
+
+        hienThiTinDen() {
+            for (let i = 0; i < this.vungNhoTinDen.length; i++) {
+                console.log((1 + i) + "." + this.vungNhoTinDen[i])
+            }
         }
-        setDate(day,month,year){
-            this.day=day;
-            this.month=month;
-            this.year =year;
+        getTinNhanDaNhan() {
+            let result=""
+            for (let i = 0; i < this.vungNhoTinDen.length; i++) {
+                result+=(1+i)+"."+ this.vungNhoTinDen[i];
+            }
+            return result;
         }
-        toString(){
-            return this.day+"/"+this.month+"/"+this.year
+        hienThiTinGui() {
+            for (let i = 0; i < this.vungNhoTinGui.length; i++) {
+                console.log((1 + i) + "." + this.vungNhoTinGui[i])
+            }
         }
+
     }
-    let date1 = new MyDate1(20,10,2021);
-    let ngay = date1.getDay()
-    let thang = date1.getMonth();
-    let nam = date1.getYear();
-    alert(ngay+"/"+thang+"/"+nam);
-    date1.setDay(31);
-    date1.setMonth(12);
-    date1.setYear(2022);
-    ngay = date1.getDay()
-    thang = date1.getMonth();
-    nam = date1.getYear();
-    alert(ngay+"/"+thang+"/"+nam);
-    date1.day ="01";
-    date1.month="02";
-    date1.year ="2019";
-    ngay = date1.day
-    thang = date1.month;
-    nam = date1.year;
-    alert(ngay+"/"+thang+"/"+nam);
-    date1.setDate("02","02","2018");
-    alert(date1.toString());
-    let date2 = new MyDate1("11","11","2011");
+
+    let nokia = new DienThoai();
+    let iphone = new DienThoai();
+    nokia.guiTinNhan(iphone,"Xin chao iphone");
+    iphone.hienThiTinDen();
+    iphone.guiTinNhan(nokia,"Chào bạn nokia. Bạn đang ở đâu đó");
+    nokia.hienThiTinDen();
+    nokia.guiTinNhan(iphone,"Mình đang ở Vn")
+    iphone.hienThiTinDen()
+
 </script>
 </body>
 </html>
