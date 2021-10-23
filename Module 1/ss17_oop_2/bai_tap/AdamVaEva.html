@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Apple {
+        constructor(khoiluong) {
+            this.khoiluong = khoiluong;
+        }
+
+        WeightApple() {
+            return this.khoiluong--;
+        }
+
+        ThisApple() {
+            if (this.khoiluong <= 0) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        getWeightApple() {
+            return this.khoiluong;
+        }
+
+        setWeightApple(value) {
+            this.khoiluong = value;
+        }
+    }
+
+    class Human {
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        getGender() {
+            return this.gender;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        setName(value) {
+            this.name = value;
+        }
+
+        setGender(value) {
+            this.gender = value;
+        }
+
+        setWeight(value) {
+            this.weight = value;
+        }
+
+        humanSay(str) {
+            alert("'" + this.name + " say' : " + str);
+        }
+
+        EatApple(apple) {
+            if (apple.ThisApple()) {
+                apple.WeightApple();
+                this.weight++;
+            } else {
+                alert("Táo đã bị ăn hết")
+            }
+        }
+    }
+
+    let Adam = new Human("adam", "Male", 60);
+    let Eva = new Human("eva", "Female", 40);
+    let tao = new Apple(10);
+    console.log("*Name : " + Adam.name);
+    console.log("Adam's Gender : " + Adam.gender);
+    console.log("Adam's Weight : " + Adam.weight);
+    console.log("*Name : " + Eva.name);
+    console.log("Eva's Gender : " + Eva.gender);
+    console.log("Eva's Weight : " + Eva.weight);
+    Adam.humanSay("I love you baby <3");
+    Eva.humanSay("I love you too, my luv :D ")
+    console.log("* Apple weight : " + tao.khoiluong)
+</script>
+</body>
+</html>
