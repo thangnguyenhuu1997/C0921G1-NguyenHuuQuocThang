@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let luong = parseInt(prompt("Nhập lương"));
+    let thue = 0;
+    let luongrong = 0;
+    if (luong >= 15000000){
+        thue = 20;
+    } else if (luong >= 7000000){
+        thue = 10;
+    } else {
+        thue = 5;
+    }
+    luongrong = luong - luong*thue/100;
+    alert("Thuế: "+ thue + "%");
+    alert("Lương ròng: " + luongrong);
+</script>
+</body>
+</html>
